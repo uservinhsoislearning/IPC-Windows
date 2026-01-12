@@ -9,7 +9,7 @@
 // Global handles
 HANDLE hMapFile;
 SharedData* pBuf;
-HWND hEdit;
+HWND hEdit; 
 
 // Function to clean up resources
 void Cleanup() {
