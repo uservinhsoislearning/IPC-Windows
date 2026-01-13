@@ -16,5 +16,5 @@ cd version_2
 
 Afterwards, run all .exe files (for version 1: Reader.exe and Writer.exe, for version 2: Reader.exe, Writer1.exe, and Writer2.exe)
 
-## Dependecies
+## Dependencies
 All libraries used in this repository are supported by the standard library of C/C++. After downloading MinGW, you don't need to download any other libraries.
