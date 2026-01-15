@@ -38,7 +38,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
                 snprintf(buffer, sizeof(buffer), 
                     "Message: %s\n\n"
                     "Shared Counter: %d\n"
-                    "(Target: 20000 if 2 writers ran)", 
+                    "(Target: 20 if 2 writers ran)", 
                     pBuf->message, pBuf->raceCounter);
                 
                 SetWindowText(hLabel, buffer);

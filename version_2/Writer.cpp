@@ -99,11 +99,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
     case WM_CREATE:
         // 1. GUI Setup
-        CreateWindow("STATIC", "Message:", WS_CHILD | WS_VISIBLE, 10, 10, 80, 20, hwnd, NULL, NULL, NULL);
-        hEdit = CreateWindow("EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER, 100, 10, 200, 25, hwnd, (HMENU)ID_EDIT_BOX, NULL, NULL);
-        CreateWindow("BUTTON", "Send Msg", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 310, 10, 80, 25, hwnd, (HMENU)ID_BTN_SEND, NULL, NULL);
-
-        CreateWindow("BUTTON", "Start Race Test (+10k)", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 10, 50, 200, 30, hwnd, (HMENU)ID_BTN_RACE, NULL, NULL);
+        CreateWindow("BUTTON", "Start Race Test (write 10)", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 10, 50, 200, 30, hwnd, (HMENU)ID_BTN_RACE, NULL, NULL);
 
         // Radio Buttons for Lock Type
         CreateWindow("BUTTON", "No Lock (Fail)", WS_CHILD | WS_VISIBLE | BS_AUTORADIOBUTTON | WS_GROUP, 10, 90, 150, 20, hwnd, (HMENU)ID_RB_NONE, NULL, NULL);
