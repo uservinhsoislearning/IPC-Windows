@@ -1,5 +1,7 @@
 # Inter-process communication
 This repository aims to simulate a shared-data communication system between 2 processes. In reality, this can happen on a system of computers (a supercomputer). This project used C++ as the main coding language.
+
+Version 1 will be the main version (written in the report)
 ## How to run?
 You need to download MinGW first. Follow this link to download [MinGW](https://sourceforge.net/projects/mingw/)
 There are 2 versions of the code in the repository, the first version is just a simple shared-memory message sender/receiver. The second version implements the lock method and the semaphore method to handle synchronization.
