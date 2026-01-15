@@ -51,7 +51,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         // Poll shared memory for changes
         if (pBuf != NULL && pBuf->sequence_number != last_sequence) {
             // READ FROM SHARED MEMORY
-            snprintf(displayBuffer, sizeof(displayBuffer), "Message: %s\nSeq: %d", pBuf->message, pBuf->sequence_number);
+            snprintf(displayBuffer, sizeof(displayBuffer), 
+                "Message: %s\nSeq: %d\nFrom Process ID: %lu", 
+                pBuf->message, pBuf->sequence_number, pBuf->senderPid);
             
             // Update GUI
             SetWindowText(hLabel, displayBuffer);

@@ -66,6 +66,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             // WRITE TO SHARED MEMORY
             strncpy(pBuf->message, tempBuffer, BUF_SIZE);
             pBuf->message[BUF_SIZE - 1] = '\0';
+            pBuf->senderPid = GetCurrentProcessId();
             pBuf->sequence_number++; // Increment to signal new data
 
             MessageBox(hwnd, "Data written to Shared Memory!", "Success", MB_OK);

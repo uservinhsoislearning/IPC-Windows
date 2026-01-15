@@ -11,6 +11,7 @@
 struct SharedData {
     char message[BUF_SIZE];
     int sequence_number; // Used to detect if data has changed
+    unsigned long senderPid;
 };
 
 #endif
